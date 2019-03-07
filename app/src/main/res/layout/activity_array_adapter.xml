@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".simpleadapter">
+    tools:context=".ArrayAdapter">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -88,4 +88,5 @@
 
         </ListView>
     </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>

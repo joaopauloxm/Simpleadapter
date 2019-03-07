@@ -1,6 +1,7 @@
 package br.com.example.aluno.simpleadapter;
 
 import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.SimpleAdapter;
@@ -14,16 +15,15 @@ import java.util.List;
 import br.com.example.aluno.simpleadapter.activity.HomeActivity;
 import br.com.example.aluno.simpleadapter.entidade.Pedido;
 
-public class simpleadapter extends DefaultAtctivit {
+public class ArrayAdapter extends DefaultAtctivit {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_simpleadapter);
+        setContentView(R.layout.activity_array_adapter);
     }
 
     public void Exibir(View view) {
-        // Capturar Dados
 
         txtid = findViewById(R.id.txtid);
         txtcliente = findViewById(R.id.txtcliente);
@@ -67,11 +67,10 @@ public class simpleadapter extends DefaultAtctivit {
 
             minhalista = findViewById(R.id.minhalista);
 
-            SimpleAdapter adapter =
-                    new SimpleAdapter(this,colecao,
-                            R.layout.item,from,to);
-
-            minhalista.setAdapter(adapter);
+            android.widget.ArrayAdapter<Pedido> arrayAdapter =
+                    new android.widget.ArrayAdapter<Pedido>(this,
+                            android.R.layout.simple_list_item_1, lista);
+            minhalista.setAdapter(arrayAdapter);
 
 
         }
